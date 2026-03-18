@@ -7,7 +7,7 @@ body {
 }
 
 .glass-surface {
-  @apply bg-surface/80 border border-white/5 shadow-xl backdrop-blur-xl;
+  @apply bg-slate-900/80 border border-white/10 shadow-[0_0_60px_rgba(15,23,42,0.9)] backdrop-blur-2xl;
 }
 
 .table-card {
