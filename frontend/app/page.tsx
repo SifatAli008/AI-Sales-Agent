@@ -14,8 +14,8 @@ export default function HomePage() {
   };
 
   return (
-    <main className="flex min-h-screen items-center justify-center px-4">
-      <Card className="glass-surface max-w-xl w-full rounded-3xl p-0">
+    <main className="flex min-h-screen items-center justify-center px-4 py-8">
+      <Card className="glass-surface max-w-xl w-full rounded-3xl p-6 md:p-8">
         <CardHeader className="space-y-3 pb-2">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-300">
             AutoPilot CRM

@@ -37,8 +37,8 @@ export default function IntegrationsPage() {
   });
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center px-4">
-      <section className="glass-surface max-w-4xl w-full rounded-3xl p-6 md:p-8 space-y-6">
+    <main className="min-h-screen flex flex-col items-center justify-center px-4 py-8">
+      <section className="glass-surface max-w-4xl w-full rounded-3xl p-8 md:p-10 space-y-8">
         <header className="space-y-3">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-cyan-300">
             Integrations
