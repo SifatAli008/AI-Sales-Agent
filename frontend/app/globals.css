@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-background text-white;
+}
+
+.glass-surface {
+  @apply bg-surface/80 border border-white/5 shadow-xl backdrop-blur-xl;
+}
+
+.table-card {
+  @apply rounded-2xl border border-white/10 bg-slate-900/40;
+}
+
