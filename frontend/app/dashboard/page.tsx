@@ -1,7 +1,6 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { useSearchParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -192,23 +191,9 @@ const MOCK_AUDIT_LOG: AuditLogEntry[] = [
   }
 ];
 
-type DashboardTab =
-  | "overview"
-  | "campaigns"
-  | "leads"
-  | "approvals"
-  | "activity";
+type DashboardTab = "overview" | "campaigns" | "leads" | "approvals" | "activity";
 
 export default function RepDashboardPage() {
-  const searchParams = useSearchParams();
-  const tabFromUrl = (searchParams?.get("tab") as DashboardTab | null) || null;
-  const initialTab: DashboardTab =
-    tabFromUrl &&
-    ["overview", "campaigns", "leads", "approvals", "activity"].includes(
-      tabFromUrl
-    )
-      ? tabFromUrl
-      : "overview";
   const [campaigns, setCampaigns] = useState<Campaign[]>(MOCK_CAMPAIGNS);
   const [leads] = useState<Lead[]>(MOCK_LEADS);
   const [approvals, setApprovals] = useState<ApprovalItem[]>(MOCK_APPROVALS);
@@ -252,7 +237,7 @@ export default function RepDashboardPage() {
           </div>
         </header>
 
-        <Tabs defaultValue={initialTab}>
+        <Tabs defaultValue="overview">
           <TabsList className="mb-2 overflow-x-auto max-w-full">
             <TabsTrigger value="overview">Overview</TabsTrigger>
             <TabsTrigger value="campaigns">Campaigns</TabsTrigger>
