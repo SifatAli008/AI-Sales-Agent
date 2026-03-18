@@ -48,14 +48,16 @@ export default function HomePage() {
           <div className="space-y-3">
             <Button
               onClick={handleContinueWithGoogle}
-              className="w-full h-10 text-sm bg-white text-slate-900 hover:bg-slate-100"
+              className="w-full h-10 text-sm bg-white text-slate-900 hover:bg-slate-100 gap-2"
             >
+              <i className="fa-brands fa-google" aria-hidden="true" />
               Continue with Google
             </Button>
             <Button
               onClick={handleContinueWithMicrosoft}
-              className="w-full h-10 text-sm bg-slate-900/60 text-white border border-white/10 hover:bg-slate-900"
+              className="w-full h-10 text-sm bg-slate-900/60 text-white border border-white/10 hover:bg-slate-900 gap-2"
             >
+              <i className="fa-brands fa-microsoft" aria-hidden="true" />
               Continue with Microsoft
             </Button>
             <p className="text-sm text-center text-slate-400">
