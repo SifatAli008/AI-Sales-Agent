@@ -25,6 +25,11 @@ Backend, Auth0 configuration, Token Vault, LangGraph agents, and Supabase are ex
 
 ---
 
+## Requirements
+
+- **Node.js**: 18.x or 20.x (recommended by Next.js 14)
+- **Package manager**: npm (shipped with Node.js)
+
 ## Project structure
 
 At the repo root:
@@ -61,20 +66,20 @@ Then open `http://localhost:3000` in your browser.
 
 ---
 
-## Deployed app (Vercel)
+## Deploying on Vercel
 
 When deploying to Vercel:
 
 - Set the **Project Root** to `frontend/`.
 - Use the default build command and output:
-  - Build command: `npm run build`
-  - Output directory: `.next`
+  - **Build command**: `npm run build`
+  - **Output directory**: `.next`
 
 No additional environment variables are required yet; Auth0 and backend URLs will be wired in future phases.
 
 ---
 
-## Core frontend flows
+## Product flows (frontend)
 
 ### 1. Auth / landing
 
@@ -114,7 +119,7 @@ Finishing the wizard routes the user to the **Integrations** page.
 
 This is the frontend shell for Auth0 Token Vault integration.
 
-### 4. Rep dashboard
+### 4. Rep dashboard / workspace
 
 `/dashboard`
 
@@ -136,7 +141,7 @@ Tabs:
 - **Activity log**
   - Scrollable audit feed (actor, action, target, channel, timestamp, meta)
 
-Tabs are linkable via `?tab=` query (`/dashboard?tab=approvals`, etc.), useful for deep links from Slack or notifications.
+Tabs are currently rendered client-side with a default **Overview** tab; URL-based deep-linking can be added once you wire in the backend and routing constraints are finalized.
 
 ---
 
