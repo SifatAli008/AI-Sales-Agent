@@ -220,17 +220,17 @@ export default function RepDashboardPage() {
   );
 
   return (
-    <main className="min-h-screen px-4 py-6 flex justify-center">
-      <section className="glass-surface max-w-6xl w-full rounded-3xl p-6 md:p-8 space-y-6">
+    <main className="min-h-screen px-4 py-8 flex justify-center">
+      <section className="glass-surface max-w-6xl w-full rounded-3xl p-8 md:p-10 space-y-8">
         <header className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-cyan-300">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-300">
               Rep Workspace
             </p>
-            <h1 className="mt-1 text-2xl md:text-3xl font-semibold">
+            <h1 className="mt-1 text-3xl md:text-4xl font-semibold">
               Your AI-powered sales cockpit
             </h1>
-            <p className="mt-2 text-xs md:text-sm text-slate-300 max-w-2xl">
+            <p className="mt-2 text-sm md:text-base text-slate-300 max-w-2xl">
               Monitor your pipeline, launch campaigns, work leads, and quickly
               approve or edit AI-generated outreach before it goes out.
             </p>
@@ -335,8 +335,8 @@ function OverviewSection(props: {
     props;
 
   return (
-    <div className="space-y-6">
-      <div className="grid gap-3 md:grid-cols-3">
+    <div className="space-y-8">
+      <div className="grid gap-4 md:grid-cols-3">
         <OverviewCard
           label="Running campaigns"
           value={runningCampaigns}
@@ -421,10 +421,10 @@ function OverviewCard(props: {
   helper: string;
 }) {
   return (
-    <Card className="p-4 space-y-2">
-      <p className="text-xs text-slate-400">{props.label}</p>
-      <p className="text-2xl font-semibold">{props.value}</p>
-      <p className="text-[11px] text-slate-400">{props.helper}</p>
+    <Card className="p-5 space-y-2.5">
+      <p className="text-sm text-slate-400">{props.label}</p>
+      <p className="text-3xl font-semibold">{props.value}</p>
+      <p className="text-xs text-slate-400">{props.helper}</p>
     </Card>
   );
 }

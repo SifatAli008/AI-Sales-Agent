@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-background text-white;
+  @apply bg-background text-white text-[15px] leading-relaxed;
 }
 
 .glass-surface {

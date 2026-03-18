@@ -13,21 +13,21 @@ export default function OnboardingPage() {
   const [step, setStep] = useState(0);
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center px-4 py-6">
-      <Card className="glass-surface max-w-3xl w-full rounded-3xl p-6 md:p-8 space-y-6">
-        <header className="space-y-3">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-cyan-300">
+    <main className="min-h-screen flex flex-col items-center justify-center px-4 py-8">
+      <Card className="glass-surface max-w-3xl w-full rounded-3xl p-8 md:p-10 space-y-8">
+        <header className="space-y-4">
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-300">
             Quick setup
           </p>
           <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-1">
-            <h1 className="text-2xl font-semibold">
+            <h1 className="text-3xl font-semibold">
               Tune your AI Sales Agent in 4 steps
             </h1>
-            <span className="text-xs text-slate-300">
+            <span className="text-sm text-slate-300">
               Step {step + 1} of {steps.length}
             </span>
           </div>
-          <p className="text-xs text-slate-300 max-w-xl">
+          <p className="text-sm text-slate-300 max-w-xl">
             We&apos;ll use this to personalize copy, pick smart defaults, and
             keep your pipeline views focused on what matters.
           </p>
@@ -90,8 +90,8 @@ function StepRole() {
   const [selected, setSelected] = useState<string | null>(null);
 
   return (
-    <div className="space-y-4">
-      <h2 className="text-lg font-medium">What best describes your role?</h2>
+    <div className="space-y-5">
+      <h2 className="text-xl font-medium">What best describes your role?</h2>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
         {roles.map((role) => (
           <button
@@ -107,7 +107,7 @@ function StepRole() {
           </button>
         ))}
       </div>
-      <p className="text-xs text-slate-400">
+      <p className="text-sm text-slate-400">
         We&apos;ll use this to suggest the right views, cadences, and alerts.
       </p>
     </div>
@@ -130,14 +130,14 @@ function StepGoals() {
     );
 
   return (
-    <div className="space-y-4">
-      <h2 className="text-lg font-medium">What are your main goals for the next 90 days?</h2>
+    <div className="space-y-5">
+      <h2 className="text-xl font-medium">What are your main goals for the next 90 days?</h2>
       <div className="flex flex-wrap gap-2">
         {goals.map((goal) => (
           <button
             key={goal}
             onClick={() => toggle(goal)}
-            className={`rounded-full border px-4 py-1.5 text-xs transition ${
+            className={`rounded-full border px-4 py-2 text-sm transition ${
               selected.includes(goal)
                 ? "border-cyan-300 bg-cyan-300/10"
                 : "border-white/10 hover:border-cyan-300/80"
@@ -165,8 +165,8 @@ function StepTools() {
   ];
 
   return (
-    <div className="space-y-4">
-      <h2 className="text-lg font-medium">Connect your tools</h2>
+    <div className="space-y-5">
+      <h2 className="text-xl font-medium">Connect your tools</h2>
       <p className="text-sm text-slate-300">
         We&apos;ll use these to draft emails, sync activity, and keep your CRM
         up to date.
@@ -183,7 +183,7 @@ function StepTools() {
                 {tool.status}
               </span>
             </div>
-            <p className="text-xs text-slate-400">
+            <p className="text-sm text-slate-400">
               Connect to let your agent act on your behalf via Auth0 Token Vault.
             </p>
             <Button
@@ -208,11 +208,11 @@ function StepTools() {
 
 function StepPreferences() {
   return (
-    <div className="space-y-4">
-      <h2 className="text-lg font-medium">How should your AI sound?</h2>
+    <div className="space-y-5">
+      <h2 className="text-xl font-medium">How should your AI sound?</h2>
       <div className="grid gap-4 md:grid-cols-2">
         <div className="space-y-2">
-          <p className="text-xs font-medium text-slate-300">Tone</p>
+          <p className="text-sm font-medium text-slate-300">Tone</p>
           <Select className="w-full">
             <option>Neutral</option>
             <option>Formal</option>
@@ -220,7 +220,7 @@ function StepPreferences() {
           </Select>
         </div>
         <div className="space-y-2">
-          <p className="text-xs font-medium text-slate-300">Email length</p>
+          <p className="text-sm font-medium text-slate-300">Email length</p>
           <Select className="w-full">
             <option>Medium</option>
             <option>Short</option>
@@ -229,7 +229,7 @@ function StepPreferences() {
         </div>
       </div>
       <div className="space-y-2">
-        <p className="text-xs font-medium text-slate-300">
+        <p className="text-sm font-medium text-slate-300">
           ICP & product notes
         </p>
         <Textarea
